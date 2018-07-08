@@ -1,0 +1,6 @@
+C:\Users\franjarop\Documents\Proyectos\RefaccionariaRobsan\RobsanNET\DataLINQ_RobsanNET\bin\Debug\DataLINQ_RobsanNET.dll.config
+C:\Users\franjarop\Documents\Proyectos\RefaccionariaRobsan\RobsanNET\DataLINQ_RobsanNET\bin\Debug\DataLINQ_RobsanNET.dll
+C:\Users\franjarop\Documents\Proyectos\RefaccionariaRobsan\RobsanNET\DataLINQ_RobsanNET\bin\Debug\DataLINQ_RobsanNET.pdb
+C:\Users\franjarop\Documents\Proyectos\RefaccionariaRobsan\RobsanNET\DataLINQ_RobsanNET\obj\Debug\DataLINQ_RobsanNET.dll
+C:\Users\franjarop\Documents\Proyectos\RefaccionariaRobsan\RobsanNET\DataLINQ_RobsanNET\obj\Debug\DataLINQ_RobsanNET.pdb
+C:\Users\franjarop\Documents\Proyectos\RefaccionariaRobsan\RobsanNET\DataLINQ_RobsanNET\obj\Debug\DataLINQ_RobsanNET.csprojResolveAssemblyReference.cache

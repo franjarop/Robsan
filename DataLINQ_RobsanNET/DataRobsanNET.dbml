@@ -1,0 +1,286 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="ROBSAN" Class="DataRobsanNETDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=LAPTOP-7T5LQKJF\SQLEXPRESS;Initial Catalog=ROBSAN;Integrated Security=True" SettingsObjectName="DataLINQ_RobsanNET.Properties.Settings" SettingsPropertyName="ROBSANConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.TAutUsuarios" Member="TAutUsuarios">
+    <Type Name="TAutUsuario">
+      <Column Name="UsuarioID" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Nombre" Type="System.String" DbType="VarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="Apellido" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Column Name="Usuario" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Password" Type="System.String" DbType="VarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="Actualizacion" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Borrado" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TCategorias" Member="TCategorias">
+    <Type Name="TCategoria">
+      <Column Name="CategoriaID" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Descripcion" Type="System.String" DbType="VarChar(200) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TDepartamentos" Member="TDepartamentos">
+    <Type Name="TDepartamento">
+      <Column Name="DepartamentoID" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Descripcion" Type="System.String" DbType="VarChar(200) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TUnidades" Member="TUnidades">
+    <Type Name="TUnidade">
+      <Column Name="UnidadID" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Descripcion" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TMarcas" Member="TMarcas">
+    <Type Name="TMarca">
+      <Column Name="MarcaID" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Descripcion" Type="System.String" DbType="VarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="FechaRegistro" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TPasillos" Member="TPasillos">
+    <Type Name="TPasillo">
+      <Column Name="PasilloID" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Descripcion" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TMuebles" Member="TMuebles">
+    <Type Name="TMueble">
+      <Column Name="MuebleID" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Descripcion" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TCaracteristicasArticulo" Member="TCaracteristicasArticulos">
+    <Type Name="TCaracteristicasArticulo">
+      <Column Name="CaracteristicaID" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ArticuloID" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Descripcion" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TPermisoUsuario" Member="TPermisoUsuarios">
+    <Type Name="TPermisoUsuario">
+      <Column Name="PermisoUsuarioID" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PermisoID" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="Usuario" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TPreciosArticulos" Member="TPreciosArticulos">
+    <Type Name="TPreciosArticulo">
+      <Column Name="ArticuloID" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MargenUtilidadUno" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="TipoDescuentoUno" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="PorcentajeDescuentoUno" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="PrecioUno" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="MargenUtilidadDos" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="TipoDescuentoDos" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="PorcentajeDescuentoDos" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="PrecioDos" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="MargenUtilidadTres" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="TipoDescuentoTres" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="PorcentajeDescuentoTres" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="PrecioTres" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TCantidadesArticulos" Member="TCantidadesArticulos">
+    <Type Name="TCantidadesArticulo">
+      <Column Name="ArticuloID" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="UnidadCompra" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="UnidadVenta" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="InventarioMin" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="InventarioMax" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="Factor" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="Existencia" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TVentasEncabezado" Member="TVentasEncabezados">
+    <Type Name="TVentasEncabezado">
+      <Column Name="FolioID" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="FechaRegistro" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="TipoCliente" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="Usuario" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="DetalleID" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="Total" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TVentasDetalle" Member="TVentasDetalles">
+    <Type Name="TVentasDetalle">
+      <Column Name="VentaDetalleID" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="DetalleID" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="ArticuloID" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Descripcion" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="MarcaID" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="PrecioUnitario" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TCorreoNotificacion" Member="TCorreoNotificacions">
+    <Type Name="TCorreoNotificacion">
+      <Column Name="CorreoID" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="fechaEnvio" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TProveedores" Member="TProveedores">
+    <Type Name="TProveedore">
+      <Column Name="ProveedorID" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Descripcion" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TArticulos" Member="TArticulos">
+    <Type Name="TArticulo">
+      <Column Name="ArticuloID" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ClaveProveedor" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Descripcion" Type="System.String" DbType="VarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="MarcaID" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="ProveedorID" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="CategoriaID" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="DepartamentoID" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="PrecioCompra" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="PrecioVentaUno" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="PrecioVentaDos" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="PasilloID" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="MuebleID" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="Actualizado" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Usuario" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Function Name="dbo.USPGETPERMISOS" Method="USPGETPERMISOS">
+    <ElementType Name="USPGETPERMISOSResult">
+      <Column Name="PermisoID" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="Descripcion" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.USPGETUNIDADES" Method="USPGETUNIDADES">
+    <ElementType Name="USPGETUNIDADESResult">
+      <Column Name="UnidadID" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="Descripcion" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.USPGETDEPARTAMENTOS" Method="USPGETDEPARTAMENTOS">
+    <ElementType Name="USPGETDEPARTAMENTOSResult">
+      <Column Name="DepartamentoID" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="Descripcion" Type="System.String" DbType="VarChar(200) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.USPGETCATEGORIAS" Method="USPGETCATEGORIAS">
+    <Parameter Name="valor" Type="System.String" DbType="VarChar(100)" />
+    <ElementType Name="USPGETCATEGORIASResult">
+      <Column Name="CategoriaID" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="Descripcion" Type="System.String" DbType="VarChar(200) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.USPGETMARCAS" Method="USPGETMARCAS">
+    <ElementType Name="USPGETMARCASResult">
+      <Column Name="MarcaID" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="Descripcion" Type="System.String" DbType="VarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="FechaRegistro" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.USPGETPASILLOS" Method="USPGETPASILLOS">
+    <ElementType Name="USPGETPASILLOSResult">
+      <Column Name="PasilloID" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="Descripcion" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.USPGETMUEBLES" Method="USPGETMUEBLES">
+    <ElementType Name="USPGETMUEBLESResult">
+      <Column Name="MuebleID" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="Descripcion" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.USPGETPERMISOUSUARIO" Method="USPGETPERMISOUSUARIO">
+    <Parameter Name="USUARIO" Parameter="uSUARIO" Type="System.String" DbType="VarChar(50)" />
+    <ElementType Name="USPGETPERMISOUSUARIOResult">
+      <Column Name="PermisoUsuarioID" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="PermisoID" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="Usuario" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.USPGETCLIENTES" Method="USPGETCLIENTES">
+    <ElementType Name="USPGETCLIENTESResult">
+      <Column Name="TipoClienteID" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="Descripcion" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.USPGETDETALLE_VENTAS" Method="USPGETDETALLE_VENTAS">
+    <Parameter Name="DETALLEID" Parameter="dETALLEID" Type="System.String" DbType="VarChar(100)" />
+    <ElementType Name="USPGETDETALLE_VENTASResult">
+      <Column Name="[N° de artitulos]" Member="N__de_artitulos" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Descripcion" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="MarcaID" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="PrecioUnitario" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="TOTAL" Type="System.Double" DbType="Float" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.USPGETVENTAS" Method="USPGETVENTAS">
+    <ElementType Name="USPGETVENTASResult">
+      <Column Name="[Numero de folio]" Member="Numero_de_folio" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="[Tipo cliente]" Member="Tipo_cliente" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="[Total venta]" Member="Total_venta" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="Usuario" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="[Fecha de registro]" Member="Fecha_de_registro" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="DetalleID" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.USPGETINFOUSUARIO" Method="USPGETINFOUSUARIO">
+    <Parameter Name="USUARIO_ID" Parameter="uSUARIO_ID" Type="System.String" DbType="VarChar(50)" />
+    <ElementType Name="USPGETINFOUSUARIOResult">
+      <Column Name="UsuarioID" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="Nombre" Type="System.String" DbType="VarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="Apellido" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Column Name="Usuario" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Password" Type="System.String" DbType="VarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="Actualizacion" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Borrado" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="PermisoID" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.USPGETPROVEEDORES" Method="USPGETPROVEEDORES">
+    <ElementType Name="USPGETPROVEEDORESResult">
+      <Column Name="ProveedorID" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="Descripcion" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.USPGETINFORMACIONARTICULO" Method="USPGETINFORMACIONARTICULO">
+    <Parameter Name="CLAVE_PRODUCTO" Parameter="cLAVE_PRODUCTO" Type="System.String" DbType="VarChar(100)" />
+    <ElementType Name="USPGETINFORMACIONARTICULOResult">
+      <Column Name="ArticuloID" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="DescripcionArticulo" Type="System.String" DbType="VarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="DescripcionMarca" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Column Name="DescripcionDepartamento" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="DescripcionCategoria" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="UnidadCompra" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="UnidadVenta" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="ClaveProveedor" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="NombreProveedor" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Factor" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="Existencia" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="InventarioMin" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="InventarioMax" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="NombrePasillo" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="NombreMueble" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="PrecioCompra" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="PrecioVentaUno" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="PrecioVentaDos" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="MargenUtilidadUno" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="PrecioUno" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="MargenUtilidadDos" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="TipoDescuentoDos" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="PorcentajeDescuentoDos" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="PrecioDos" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="DescripcionGral" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.USPGETARTICULOSDETALLE" Method="USPGETARTICULOSDETALLE">
+    <ElementType Name="USPGETARTICULOSDETALLEResult">
+      <Column Name="Clave" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ClaveProveedor" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Descripcion" Type="System.String" DbType="VarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="Marca" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Column Name="Categoria" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="Departamento" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="Precio" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="Existencia" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="Acumulado" Type="System.Decimal" DbType="Decimal(37,0)" CanBeNull="true" />
+      <Column Name="Caracteristicas" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="UnidadMin" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="UnidadMax" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+</Database>

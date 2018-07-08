@@ -1,0 +1,346 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6380E15F-2B83-406B-BAE1-FB321802FDC7}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RobsanNET</RootNamespace>
+    <AssemblyName>RobsanNET</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\Users\franjarop\Desktop\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>2</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>ED29C88567286F7AC3CA9720E6E70BEADA8FAB8A</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>RobsanNET_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Logotipo.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Data.v17.2, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Images.v17.2, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v17.2.Core, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v17.2, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v17.2, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v17.2, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGrid.v17.2, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraNavBar.v17.2, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BLLRobsanNET\BLLConsulta.cs" />
+    <Compile Include="BLLRobsanNET\BLLOperacion.cs" />
+    <Compile Include="BLLRobsanNET\BLLSeguridad.cs" />
+    <Compile Include="Consultas\ConfiguracionNotificaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consultas\ConfiguracionNotificaciones.Designer.cs">
+      <DependentUpon>ConfiguracionNotificaciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\Ventas\ConsultaDetalleVentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consultas\Ventas\ConsultaDetalleVentas.Designer.cs">
+      <DependentUpon>ConsultaDetalleVentas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\Ventas\ConsultaDetalleVentasController.cs" />
+    <Compile Include="Consultas\Ventas\ConsultaVentaController.cs" />
+    <Compile Include="Consultas\Ventas\ConsultaVentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consultas\Ventas\ConsultaVentas.Designer.cs">
+      <DependentUpon>ConsultaVentas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Genericos\Correo.cs" />
+    <Compile Include="Genericos\DatosUsuario.cs" />
+    <Compile Include="Genericos\Validador.cs" />
+    <Compile Include="Genericos\Ventanas\ActivacionPermiso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Genericos\Ventanas\ActivacionPermiso.Designer.cs">
+      <DependentUpon>ActivacionPermiso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Genericos\Ventanas\Listados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Genericos\Ventanas\Listados.Designer.cs">
+      <DependentUpon>Listados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Genericos\Ventanas\ListadosController.cs" />
+    <Compile Include="Genericos\Ventanas\RegistroListado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Genericos\Ventanas\RegistroListado.Designer.cs">
+      <DependentUpon>RegistroListado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Genericos\Ventanas\RegistroListadoController.cs" />
+    <Compile Include="MenuController.cs" />
+    <Compile Include="Operaciones\ArticuloAnexo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Operaciones\ArticuloAnexo.Designer.cs">
+      <DependentUpon>ArticuloAnexo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Operaciones\ArticuloConsultaController.cs" />
+    <Compile Include="Operaciones\ArticuloRegistroController.cs" />
+    <Compile Include="Operaciones\ArticuloConsulta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Operaciones\ArticuloConsulta.Designer.cs">
+      <DependentUpon>ArticuloConsulta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Operaciones\ArticuloRegistro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Operaciones\ArticuloRegistro.Designer.cs">
+      <DependentUpon>ArticuloRegistro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Operaciones\Ventas\PagoCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Operaciones\Ventas\PagoCliente.Designer.cs">
+      <DependentUpon>PagoCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Operaciones\Ventas\PuntoVenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Operaciones\Ventas\PuntoVenta.Designer.cs">
+      <DependentUpon>PuntoVenta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Operaciones\Ventas\PuntoVentaController.cs" />
+    <Compile Include="Parametros\Acciones.cs" />
+    <Compile Include="Parametros\TituloVentana.cs" />
+    <Compile Include="Seguridad\ConfiguracionConexion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Seguridad\ConfiguracionConexion.Designer.cs">
+      <DependentUpon>ConfiguracionConexion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Seguridad\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Seguridad\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Seguridad\LoginController.cs" />
+    <Compile Include="Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu.Designer.cs">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Seguridad\Usuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Seguridad\Usuario.Designer.cs">
+      <DependentUpon>Usuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Seguridad\UsuarioController.cs" />
+    <EmbeddedResource Include="Consultas\ConfiguracionNotificaciones.resx">
+      <DependentUpon>ConfiguracionNotificaciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consultas\Ventas\ConsultaDetalleVentas.resx">
+      <DependentUpon>ConsultaDetalleVentas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consultas\Ventas\ConsultaVentas.resx">
+      <DependentUpon>ConsultaVentas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Genericos\Ventanas\ActivacionPermiso.resx">
+      <DependentUpon>ActivacionPermiso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Genericos\Ventanas\Listados.resx">
+      <DependentUpon>Listados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Genericos\Ventanas\RegistroListado.resx">
+      <DependentUpon>RegistroListado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu.resx">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Operaciones\ArticuloAnexo.resx">
+      <DependentUpon>ArticuloAnexo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Operaciones\ArticuloConsulta.resx">
+      <DependentUpon>ArticuloConsulta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Operaciones\ArticuloRegistro.resx">
+      <DependentUpon>ArticuloRegistro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Operaciones\Ventas\PagoCliente.resx">
+      <DependentUpon>PagoCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Operaciones\Ventas\PuntoVenta.resx">
+      <DependentUpon>PuntoVenta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Seguridad\ConfiguracionConexion.resx">
+      <DependentUpon>ConfiguracionConexion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Seguridad\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Seguridad\Usuario.resx">
+      <DependentUpon>Usuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="RobsanNET_TemporaryKey.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DataLINQ_RobsanNET\DataLINQ_RobsanNET.csproj">
+      <Project>{f80d58dc-2eb7-4157-8c78-d9cb32fb544d}</Project>
+      <Name>DataLINQ_RobsanNET</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\salida-del-producto.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\salida-del-producto%281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clic.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clic%281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nuevo-producto.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\seleccionar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\etiqueta-de-nuevo-producto.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cruz-eliminar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logotipo.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\efectivo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cruz-eliminar 32x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\usuarios-multiples-en-silueta.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\usuarios64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\divisa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Logotipo.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
