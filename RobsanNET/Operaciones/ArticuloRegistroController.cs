@@ -534,6 +534,7 @@ namespace RobsanNET.Operaciones
                     cmbControl.DataSource = operacion.ObtenerMueblesBLL();
                     break;
                 default:
+                    string prueba = string.Empty;
                     break;
             }
             cmbControl.DisplayMember = "Descripcion";
